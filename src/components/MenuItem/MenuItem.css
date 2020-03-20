@@ -1,0 +1,11 @@
+.menu-item {
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+    border: 1px solid gray;
+    margin: 1px;
+    justify-content: space-around;
+}
+.menu-item__checkbox {
+    align-self: center;
+}
