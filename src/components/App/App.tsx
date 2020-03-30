@@ -3,19 +3,23 @@ import './App.css';
 
 import Menu from '../Menu/Menu'
 import Modal from "../Modal/Modal";
-import Context from '../service/context';
-import mockData from "../../data";
+import {ContextInterface, House} from "../../interfaces";
+
+export const Context = React.createContext({} as ContextInterface);
 
 const App = () => {
-    const [modalView, setModalView] = useState(false);
+    const [checkedHouses, setCheckedHouses] = useState([] as House[]);
     return (
-        <Context.Provider value={mockData}>
-            <div className="App">
-                <Menu setModalView={setModalView}/>
-                <Modal modalView={modalView} setModalView={setModalView}/>
-            </div>
+        <Context.Provider value={{
+            checkedHouses,
+            setCheckedHouses
+        }}>
+            <Menu/>
+            <Modal/>
         </Context.Provider>
-    );
+    )
 };
 
 export default App;
+
+

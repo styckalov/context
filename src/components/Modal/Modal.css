@@ -1,6 +1,7 @@
 .modal__wrapper__visible {
     position: absolute;
     display: block;
+    background-color: darkgray;
     top: 50%;
     left: 50%;
     margin-left: -200px;

@@ -1,29 +1,21 @@
-const mockData = [
+const houses = [
     {
+        "id": "1",
         "title": "Almost Heaven",
         "price": "300$",
         "description": "Lorem ipsum dolor sit amet, consectetur."
     },
     {
-        "title": "Almost Heaven",
+        "id": "2",
+        "title": "Almost Hell",
         "price": "300$",
         "description": "Lorem ipsum dolor sit amet, consectetur."
     },
     {
-        "title": "Almost Heaven",
-        "price": "300$",
-        "description": "Lorem ipsum dolor sit amet, consectetur."
-    },
-    {
-        "title": "Almost Heaven",
-        "price": "300$",
-        "description": "Lorem ipsum dolor sit amet, consectetur."
-    },
-    {
-        "title": "Almost Heaven",
+        "id": "3",
+        "title": "Almost Paradise",
         "price": "300$",
         "description": "Lorem ipsum dolor sit amet, consectetur."
     },
 ];
-
-export default mockData;
+export default houses;

@@ -1,16 +1,18 @@
-export interface modalProps {
-    setModalView: (flag: boolean) => void;
-    modalView: boolean;
-}
+import React from 'react'
+
 export interface House {
+    id: string,
     title: string,
     price: string,
     description: string
 }
-export interface MenuItemProps {
-    house: House,
-    setModalView: (flag: boolean) => void;
+export interface  ContextInterface {
+    checkedHouses: House[],
+    setCheckedHouses: React.Dispatch<React.SetStateAction<House[]>>
 }
-export interface MenuProps {
-    setModalView: (flag: boolean) => void;
+
+export interface menuItemProps {
+    house: House,
+    setChecked: React.Dispatch<React.SetStateAction<boolean>>,
+    checked: boolean
 }

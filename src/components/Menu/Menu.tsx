@@ -1,16 +1,15 @@
-import React, {useContext} from 'react';
-import Context from "../service/context";
-import {House, MenuProps, MenuItemProps} from "../../interfaces";
+import React from 'react';
+import {House} from "../../interfaces";
 import MenuItem from "../MenuItem/MenuItem";
 import "./Menu.css"
+import houses from '../../data'
 
-const Menu = ({setModalView}: MenuProps) => {
-    const modalContext: House[] = useContext(Context);
-    const items = modalContext.map((key: House, index: number) => {
+const Menu = () => {
+    const items = houses.map((key: House) => {
         const {...itemProps} = key;
         return (
-            <div key={index}>
-                <MenuItem house = {itemProps} setModalView={setModalView}/>
+            <div key={key.id}>
+                <MenuItem {...itemProps}/>
             </div>
         )
     });
