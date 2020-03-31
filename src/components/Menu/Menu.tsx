@@ -1,15 +1,18 @@
 import React from 'react';
+
 import {House} from "../../interfaces";
 import MenuItem from "../MenuItem/MenuItem";
+import {HousesContext} from '../../providers/housesProvider'
+
 import "./Menu.css"
-import houses from '../../data'
 
 const Menu = () => {
-    const items = houses.map((key: House) => {
-        const {...itemProps} = key;
+    const {houses, onSelectedHouseChange} = useContext(HousesContext);
+
+    const items = houses.map((house: House) => {
         return (
-            <div key={key.id}>
-                <MenuItem {...itemProps}/>
+            <div key={house.id}>
+                <MenuItem {...house} onCheckedChange={onSelectedHouseChange}/>
             </div>
         )
     });
